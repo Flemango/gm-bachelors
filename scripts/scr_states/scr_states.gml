@@ -19,9 +19,7 @@ function state_set(_state) constructor
 }
 
 function state_attack(_state, _mask) : state_set(_state) constructor
-{
-	//state_set(_state);
-	
+{	
 	var _hitbox = instance_create_depth(x,y, obj_char.depth-1, obj_hitbox);
 	_hitbox.sprite_index=sprite_index;
 	_hitbox.mask_index=_mask;

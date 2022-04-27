@@ -43,14 +43,6 @@ if (col_select)
 				global.res_w=res[res_pos][1];
 				global.res_h=res[res_pos][2];
 
-				
-
-				/*if (!checked)
-				{
-					window_set_size(res[res_pos][1],res[res_pos][2]);
-					window_set_position(display_get_width()/2 - (res[res_pos][1]/2), display_get_height()/2 - (res[res_pos][2]/2));
-				}*/
-
 				game_set_speed(fps_arr[fps_pos][1], gamespeed_fps);
 				show_debug_message(string(game_get_speed(gamespeed_fps)));
 				window_set_fullscreen(checked);

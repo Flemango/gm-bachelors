@@ -56,16 +56,19 @@ if (state==states.idle || state==states.run)
 	if (attack)
 	{
 		xspeed=0;
+		var gamespd=game_get_speed(gamespeed_fps);
 		
 		switch(combo)
 		{
 		case 0:
 			state_attack(states.basic1, mask_attack1);
 			combo++;
+			alarm[0]=gamespd*1.2;
 			break;
 		case 1:
 			state_attack(states.basic2, mask_attack2);
 			combo++;
+			alarm[0]=gamespd*1.2;
 			break;
 		case 2:
 			state_attack(states.basic3, mask_attack3);
@@ -89,7 +92,7 @@ if (state==states.charge)
 			if (image_xscale>0) xspeed=charge_spd;
 			else xspeed=-charge_spd;
 			
-			state_set(states.release);
+			state_attack(states.release, mask_release);
 		} 
 		else 
 			state_set(states.idle);

@@ -2,7 +2,7 @@ xspeed=0;
 y=room_height/2-(sprite_height/2);
 
 max_x=fps_dependant(1.6); //2
-charge_spd=fps_dependant(8); //10
+charge_spd=fps_dependant(10); //10
 slide_spd=fps_dependant(5.6); //7
 
 frc=frc_calc(.066,max_x); //friciton 0.083
@@ -48,4 +48,4 @@ keyboard_set_map(ord("S"), vk_down);
 show_debug_message("frc: "+string(frc));
 show_debug_message("max_x: "+string(max_x));
 
-view_camera[0] = camera_create_view(0,0,1366,1024);
+//view_camera[0] = camera_create_view(0,0,1366,1024);
