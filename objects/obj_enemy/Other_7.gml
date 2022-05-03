@@ -1,2 +1,2 @@
 if (state==states.attack)
-	state_set(state.endstate);
+	state_set(states.prepare);

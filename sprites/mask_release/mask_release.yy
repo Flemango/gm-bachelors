@@ -86,7 +86,7 @@
   "nineSlice": null,
   "parent": {
     "name": "masks",
-    "path": "folders/sprites/masks.yy",
+    "path": "folders/sprites/char/masks.yy",
   },
   "resourceVersion": "1.0",
   "name": "mask_release",

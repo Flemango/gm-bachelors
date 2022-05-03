@@ -26,8 +26,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "enemy children",
-    "path": "folders/objects/game/enemy children.yy",
+    "name": "enemies",
+    "path": "folders/objects/game/enemies.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_skeleton",

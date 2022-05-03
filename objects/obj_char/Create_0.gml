@@ -13,6 +13,13 @@ image_yscale=scale;
 
 combo=0;
 
+hp=85;
+max_hp=100;
+hp_width=128;
+hp_height=16;
+hp_x=camera_get_view_x(view_camera[0])+16;
+hp_y=base_h-(16+hp_height);
+
 states = {
 	idle: new State(spr_idle),
 	run: new State(spr_run),

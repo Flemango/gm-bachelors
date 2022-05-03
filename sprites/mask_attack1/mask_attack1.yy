@@ -1,15 +1,15 @@
 {
   "bboxMode": 0,
-  "collisionKind": 1,
+  "collisionKind": 4,
   "type": 0,
   "origin": 9,
   "preMultiplyAlpha": false,
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
-  "bbox_left": 48,
+  "bbox_left": 0,
   "bbox_right": 84,
-  "bbox_top": 25,
+  "bbox_top": 0,
   "bbox_bottom": 68,
   "HTile": false,
   "VTile": false,
@@ -33,12 +33,21 @@
     {"compositeImage":{"FrameId":{"name":"e068773a-7cb4-447c-bcd4-c993138b1572","path":"sprites/mask_attack1/mask_attack1.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"e068773a-7cb4-447c-bcd4-c993138b1572","path":"sprites/mask_attack1/mask_attack1.yy",},"LayerId":{"name":"0cecf179-04e4-4f80-9b95-cd818b78e54a","path":"sprites/mask_attack1/mask_attack1.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"mask_attack1","path":"sprites/mask_attack1/mask_attack1.yy",},"resourceVersion":"1.0","name":"e068773a-7cb4-447c-bcd4-c993138b1572","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"c2729b4c-738b-4b1f-a1da-75d55e860852","path":"sprites/mask_attack1/mask_attack1.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c2729b4c-738b-4b1f-a1da-75d55e860852","path":"sprites/mask_attack1/mask_attack1.yy",},"LayerId":{"name":"0cecf179-04e4-4f80-9b95-cd818b78e54a","path":"sprites/mask_attack1/mask_attack1.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"mask_attack1","path":"sprites/mask_attack1/mask_attack1.yy",},"resourceVersion":"1.0","name":"c2729b4c-738b-4b1f-a1da-75d55e860852","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"ae1a1c57-df75-4866-8ac0-4ec8aa0a2ff6","path":"sprites/mask_attack1/mask_attack1.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ae1a1c57-df75-4866-8ac0-4ec8aa0a2ff6","path":"sprites/mask_attack1/mask_attack1.yy",},"LayerId":{"name":"0cecf179-04e4-4f80-9b95-cd818b78e54a","path":"sprites/mask_attack1/mask_attack1.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"mask_attack1","path":"sprites/mask_attack1/mask_attack1.yy",},"resourceVersion":"1.0","name":"ae1a1c57-df75-4866-8ac0-4ec8aa0a2ff6","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"22228358-cd3b-45b0-8795-8e5e858417ab","path":"sprites/mask_attack1/mask_attack1.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"22228358-cd3b-45b0-8795-8e5e858417ab","path":"sprites/mask_attack1/mask_attack1.yy",},"LayerId":{"name":"0cecf179-04e4-4f80-9b95-cd818b78e54a","path":"sprites/mask_attack1/mask_attack1.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"mask_attack1","path":"sprites/mask_attack1/mask_attack1.yy",},"resourceVersion":"1.0","name":"22228358-cd3b-45b0-8795-8e5e858417ab","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"baf2a8ac-2453-46a6-b461-54aa9e21bc75","path":"sprites/mask_attack1/mask_attack1.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"baf2a8ac-2453-46a6-b461-54aa9e21bc75","path":"sprites/mask_attack1/mask_attack1.yy",},"LayerId":{"name":"0cecf179-04e4-4f80-9b95-cd818b78e54a","path":"sprites/mask_attack1/mask_attack1.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"mask_attack1","path":"sprites/mask_attack1/mask_attack1.yy",},"resourceVersion":"1.0","name":"baf2a8ac-2453-46a6-b461-54aa9e21bc75","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"06b0d776-af12-4b0c-bd20-d5e01d648379","path":"sprites/mask_attack1/mask_attack1.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"06b0d776-af12-4b0c-bd20-d5e01d648379","path":"sprites/mask_attack1/mask_attack1.yy",},"LayerId":{"name":"0cecf179-04e4-4f80-9b95-cd818b78e54a","path":"sprites/mask_attack1/mask_attack1.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"mask_attack1","path":"sprites/mask_attack1/mask_attack1.yy",},"resourceVersion":"1.0","name":"06b0d776-af12-4b0c-bd20-d5e01d648379","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"1c47cfbc-61b6-4ed3-85e6-b6f9ada17621","path":"sprites/mask_attack1/mask_attack1.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"1c47cfbc-61b6-4ed3-85e6-b6f9ada17621","path":"sprites/mask_attack1/mask_attack1.yy",},"LayerId":{"name":"0cecf179-04e4-4f80-9b95-cd818b78e54a","path":"sprites/mask_attack1/mask_attack1.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"mask_attack1","path":"sprites/mask_attack1/mask_attack1.yy",},"resourceVersion":"1.0","name":"1c47cfbc-61b6-4ed3-85e6-b6f9ada17621","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"c85bc6bb-dc9e-4791-b881-27bce880d66e","path":"sprites/mask_attack1/mask_attack1.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"c85bc6bb-dc9e-4791-b881-27bce880d66e","path":"sprites/mask_attack1/mask_attack1.yy",},"LayerId":{"name":"0cecf179-04e4-4f80-9b95-cd818b78e54a","path":"sprites/mask_attack1/mask_attack1.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"mask_attack1","path":"sprites/mask_attack1/mask_attack1.yy",},"resourceVersion":"1.0","name":"c85bc6bb-dc9e-4791-b881-27bce880d66e","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"mask_attack1","path":"sprites/mask_attack1/mask_attack1.yy",},
@@ -48,7 +57,7 @@
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
-    "length": 5.0,
+    "length": 8.0,
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
@@ -56,8 +65,11 @@
             {"id":"cf6f78b1-cb80-4824-b0a8-39628cf08136","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e7b0ff1d-3bc0-4c00-9079-95bbbaffa685","path":"sprites/mask_attack1/mask_attack1.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"49df678b-26e7-4fdb-a157-92f1e1931714","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3d612fe3-f5c6-4471-9eaf-de162c5d0b0f","path":"sprites/mask_attack1/mask_attack1.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"88f63d96-b016-43de-8c24-5eb5de11fec1","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e068773a-7cb4-447c-bcd4-c993138b1572","path":"sprites/mask_attack1/mask_attack1.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"73888901-5a92-46ea-bf51-646f3a17e189","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c2729b4c-738b-4b1f-a1da-75d55e860852","path":"sprites/mask_attack1/mask_attack1.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"06dda59a-db49-47f9-a270-071222f8316a","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ae1a1c57-df75-4866-8ac0-4ec8aa0a2ff6","path":"sprites/mask_attack1/mask_attack1.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"4f3d6a55-4fae-41c1-96a3-17d4a01f9ab0","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"22228358-cd3b-45b0-8795-8e5e858417ab","path":"sprites/mask_attack1/mask_attack1.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"3b50e99c-dbe0-4d23-8e44-284f9465753f","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"baf2a8ac-2453-46a6-b461-54aa9e21bc75","path":"sprites/mask_attack1/mask_attack1.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"03edb58c-ac3b-45b6-94f3-6599c1011b61","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"06b0d776-af12-4b0c-bd20-d5e01d648379","path":"sprites/mask_attack1/mask_attack1.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"cf1d3da8-892b-46b5-afcf-de78cfdbfa14","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1c47cfbc-61b6-4ed3-85e6-b6f9ada17621","path":"sprites/mask_attack1/mask_attack1.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"128c4e43-f98b-4181-bda2-22082a2192df","Key":7.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c85bc6bb-dc9e-4791-b881-27bce880d66e","path":"sprites/mask_attack1/mask_attack1.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -86,7 +98,7 @@
   "nineSlice": null,
   "parent": {
     "name": "masks",
-    "path": "folders/sprites/masks.yy",
+    "path": "folders/sprites/char/masks.yy",
   },
   "resourceVersion": "1.0",
   "name": "mask_attack1",
