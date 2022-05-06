@@ -5,8 +5,6 @@ if (global.pause) {
 
 image_speed=1;
 
-
-
 var target=obj_char;
 var char_w=target.bbox_right-target.bbox_left;
 
@@ -37,9 +35,14 @@ switch (state)
 		{
 			if (object_index==child_arr[i])
 			{
-				if (!place_meeting(x+self_w/4*dir,y, child_arr[i]))
+				if (!place_meeting(x+self_w/4*dir, y, child_arr[i]))
 					spd=dir*run_spd;
-				else spd=0;
+				else 
+				{
+					if collision_line(x+(self_w/2*dir), y, target.x, target.y, child_arr[i], false, true)
+						spd=0;
+					else spd=dir*run_spd;
+				}
 			}
 		}
 		
@@ -72,7 +75,7 @@ switch (state)
 		if (spd==0) 
 		{
 			hit=false;
-			state_set(states.chase);
+			state_set(states.idle);
 		}
 	break;
 }

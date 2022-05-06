@@ -62,8 +62,8 @@
     "children": [],
   },
   "RoomOrderNodes": [
-    {"roomId":{"name":"room_name","path":"rooms/room_name/room_name.yy",},},
     {"roomId":{"name":"room_menu","path":"rooms/room_menu/room_menu.yy",},},
+    {"roomId":{"name":"room_name","path":"rooms/room_name/room_name.yy",},},
     {"roomId":{"name":"room_game","path":"rooms/room_game/room_game.yy",},},
     {"roomId":{"name":"room_options","path":"rooms/room_options/room_options.yy",},},
   ],
