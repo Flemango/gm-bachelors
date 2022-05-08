@@ -21,3 +21,5 @@ states = {
 }
 
 state=states.idle;
+
+atk_dmg=20;

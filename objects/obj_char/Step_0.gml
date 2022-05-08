@@ -22,6 +22,8 @@ x+=xspeed;
 
 if (state==states.idle || state==states.run)
 {
+	hit=false;
+	
 	if (left && xspeed>-max_x)
 	{
 		xspeed=-max_x;
@@ -98,6 +100,14 @@ if (state==states.charge)
 		else 
 			state_set(states.idle);
 	}
+}
+
+if (state==states.damage)
+{
+	hit=true;
+	
+	if (image_xscale>0) xspeed=-knockback;
+			else xspeed=knockback;
 }
 
 if (xspeed<0 && (state==states.idle  || xspeed<-max_x))

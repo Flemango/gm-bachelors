@@ -49,7 +49,7 @@ switch (state)
 		if (distance_to_object(target) > aggro_range)
 			state_set(states.idle);
 			
-		if (place_meeting(x,y,obj_char))
+		if (place_meeting(x, y, target))
 			state_set(states.prepare);
 	break;
 	
@@ -58,7 +58,7 @@ switch (state)
 		
 		if (alarm[0]==-1)
 		{
-			if (place_meeting(x,y,obj_char))
+			if (place_meeting(x,y, target))
 				alarm[0]=game_spd*attack_cd;
 			else
 				state_set(states.chase);
@@ -66,7 +66,15 @@ switch (state)
 	break;
 	
 	case states.attack:
-		//
+		if (place_meeting(x, y, target))
+		{
+			var enemy=self;
+			with (target)
+			{
+				if (!hit) hp-=enemy.atk_dmg;
+				state_set(states.damage);
+			}
+		}
 	break;
 	
 	case states.damage:

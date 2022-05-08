@@ -4,6 +4,7 @@ y=room_height/2-(sprite_height/2);
 max_x=fps_dependant(1.6); //2
 charge_spd=fps_dependant(10); //10
 slide_spd=fps_dependant(5.6); //7
+knockback=fps_dependant(2);
 
 frc=frc_calc(.066,max_x); //friciton 0.083
 
@@ -12,6 +13,7 @@ image_xscale=scale;
 image_yscale=scale;
 
 combo=0;
+hit=false; //check if already damaged to avoid double dmg
 
 hp=85;
 max_hp=100;
@@ -29,9 +31,9 @@ states = {
 	
 	basic1: new State(spr_attack1),
 	basic2: new State(spr_attack2),
-	basic3: new State(spr_attack3)
+	basic3: new State(spr_attack3),
 	
-	//damage: new State(),
+	damage: new State(spr_dmg)
 	//explosion: new State(),
 }
 
@@ -41,6 +43,8 @@ states.slide.StateOnEnd(states.idle);
 states.basic1.StateOnEnd(states.idle);
 states.basic2.StateOnEnd(states.idle);
 states.basic3.StateOnEnd(states.idle);
+
+states.damage.StateOnEnd(states.idle);
 
 state = states.idle;
 

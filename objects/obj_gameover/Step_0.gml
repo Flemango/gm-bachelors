@@ -1,5 +1,6 @@
-if (string_length(name)<10) name=keyboard_string;
-else keyboard_string=name;
+if (string_length(keyboard_string) > limit)
+    keyboard_string = string_delete(keyboard_string, limit+1, 1);
+name=keyboard_string;
 
 enter=(keyboard_check(vk_enter));
 

@@ -11,8 +11,9 @@ see_range=128;
 
 aggro_range=256;
 aggro_check=false;
-aggro_check_dur=5;
-attack_cd=1.5;
+aggro_check_dur=fps_dependant(5);
+attack_cd=fps_dependant(1.5);
+atk_dmg=1;
 
 states = {
 	idle: new State(spr_enemy_idle),
