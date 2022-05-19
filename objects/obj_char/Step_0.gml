@@ -102,12 +102,19 @@ if (state==states.charge)
 	}
 }
 
+if (display_hp!=hp)
+{
+	display_hp--;
+}
+
 if (state==states.damage)
 {
 	hit=true;
 	
 	if (image_xscale>0) xspeed=-knockback;
 			else xspeed=knockback;
+		
+	if (display_hp<=0) room_goto(room_name);
 }
 
 if (xspeed<0 && (state==states.idle  || xspeed<-max_x))

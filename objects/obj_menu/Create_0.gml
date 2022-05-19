@@ -4,6 +4,8 @@ y=room_height/2;
 show_debug_message("pos: "+string(x)+" "+string(y));
 
 op_space=128;
+move_arrows=0;
+carousel_x=-192;
 
 pos=0;
 

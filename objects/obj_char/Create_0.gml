@@ -15,8 +15,10 @@ image_yscale=scale;
 combo=0;
 hit=false; //check if already damaged to avoid double dmg
 
-hp=85;
 max_hp=100;
+hp=max_hp;
+display_hp=hp;
+
 hp_width=128;
 hp_height=16;
 hp_x=camera_get_view_x(view_camera[0])+16;
