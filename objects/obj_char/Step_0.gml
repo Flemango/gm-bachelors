@@ -5,6 +5,8 @@ if (global.pause) {
 
 image_speed=1;
 
+hp_x=camera_get_view_x(view_camera[0])+16;
+
 var left=keyboard_check(vk_left);
 var right=keyboard_check(vk_right);
 var slide=keyboard_check_pressed(vk_down);

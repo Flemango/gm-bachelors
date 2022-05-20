@@ -18,3 +18,4 @@ cam_y=camera_get_view_y(view_camera[0]);
 pause_pos=0;
 
 depth=-99;
+
