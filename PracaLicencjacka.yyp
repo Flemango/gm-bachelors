@@ -23,6 +23,7 @@
     {"id":{"name":"obj_options","path":"objects/obj_options/obj_options.yy",},"order":2,},
     {"id":{"name":"spr_attack3","path":"sprites/spr_attack3/spr_attack3.yy",},"order":2,},
     {"id":{"name":"spr_enter","path":"sprites/spr_enter/spr_enter.yy",},"order":3,},
+    {"id":{"name":"spr_s_light","path":"sprites/spr_s_light/spr_s_light.yy",},"order":5,},
     {"id":{"name":"spr_enemy_prep","path":"sprites/spr_enemy_prep/spr_enemy_prep.yy",},"order":2,},
     {"id":{"name":"spr_run","path":"sprites/spr_run/spr_run.yy",},"order":1,},
     {"id":{"name":"sdr_alphafix","path":"shaders/sdr_alphafix/sdr_alphafix.yy",},"order":0,},

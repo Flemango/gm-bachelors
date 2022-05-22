@@ -2,6 +2,36 @@ var size_w, size_h;
 size_w=180;
 size_h=120;
 
+cam_x=camera_get_view_x(view_camera[0]);
+cam_y=camera_get_view_y(view_camera[0]);
+
+#region //lighting
+
+/*if (room=room_game)
+{
+	if (surface_exists(light_surf))
+	{
+		surface_set_target(light_surf);
+		draw_clear(c_black);
+		
+		with (obj_char)
+		{
+			gpu_set_blendmode(bm_subtract);
+			draw_sprite_ext(spr_s_light, 0, x, y, 3, 3, 0, c_white, 1);
+			
+			//gpu_set_blendmode(bm_normal);
+			//draw_sprite_ext(spr_s_light, 0, x, y, 1, 1, 0, c_white, 0.7);
+		}
+		
+		gpu_set_blendmode(bm_normal);
+		surface_reset_target();
+		draw_surface_ext(light_surf, 0, 0, 1, 1, 0, c_white, dark);
+	}
+	else light_surf = surface_create(room_width, room_height);
+}*/
+
+#endregion
+
 if (global.pause)
 {
 	draw_set_font(f_main);

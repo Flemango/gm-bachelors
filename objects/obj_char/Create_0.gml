@@ -6,7 +6,7 @@ charge_spd=fps_dependant(10); //10
 slide_spd=fps_dependant(5.6); //7
 knockback=fps_dependant(2);
 
-frc=frc_calc(.066,max_x); //friciton 0.083
+frc=frc_calc(.07,max_x); //friciton 0.083
 
 scale=1;
 image_xscale=scale;
