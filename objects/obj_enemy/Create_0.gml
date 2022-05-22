@@ -5,14 +5,14 @@ game_spd=game_get_speed(gamespeed_fps);
 
 run_spd=fps_dependant(1);
 knockback_spd=fps_dependant(10);
-frc=frc_calc(.066,run_spd);
+frc=frc_calc(.066, run_spd);
 
 see_range=128;
 
 aggro_range=256;
 aggro_check=false;
 aggro_check_dur=fps_dependant(5);
-attack_cd=fps_dependant(1.5);
+attack_cd=1.5;
 atk_dmg=1;
 
 states = {

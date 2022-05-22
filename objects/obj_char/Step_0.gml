@@ -105,16 +105,15 @@ if (state==states.charge)
 }
 
 if (display_hp!=hp)
-{
 	display_hp--;
-}
+
 
 if (state==states.damage)
 {
 	hit=true;
 	
-	if (image_xscale>0) xspeed=-knockback;
-			else xspeed=knockback;
+	/*if (image_xscale>0) xspeed=-knockback;
+			else xspeed=knockback;*/
 		
 	if (display_hp<=0) room_goto(room_name);
 }
@@ -134,5 +133,9 @@ if (xspeed>0 && (state==states.idle || xspeed>max_x))
 	if (xspeed%frc!=0 && xspeed<0)
 		xspeed=0;
 }
+
+var mask_w=bbox_right+1-bbox_left;
+if (x<=mask_w/2) x=mask_w/2;
+if (x>=room_width-mask_w/2) x=room_width-mask_w/2;
 
 #endregion

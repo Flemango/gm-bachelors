@@ -59,7 +59,10 @@ switch (state)
 		if (alarm[0]==-1)
 		{
 			if (place_meeting(x,y, target))
+			{
 				alarm[0]=game_spd*attack_cd;
+				show_debug_message(alarm[0]);
+			}
 			else
 				state_set(states.chase);
 		}
@@ -71,7 +74,10 @@ switch (state)
 			var enemy=self;
 			with (target)
 			{
-				if (!hit) hp-=enemy.atk_dmg;
+				if (!hit) {
+					hp-=enemy.atk_dmg;
+					xspeed=knockback*sign(x-enemy.x);
+				} 
 				state_set(states.damage);
 			}
 		}
@@ -99,3 +105,7 @@ if (spd!=0 && state==states.damage)
 		spd=0;
 	}
 }
+
+var mask_w=bbox_right+1-bbox_left;
+if (x<=mask_w/2) x=mask_w/2;
+if (x>=room_width-mask_w/2) x=room_width-mask_w/2;

@@ -26,7 +26,7 @@ if (keyboard_check_pressed(vk_escape))
 	else game_end();
 }
 	
-carousel_x+=1;
+carousel_x+=fps_dependant(1);
 
 if (carousel_x>base_w+32)
 	carousel_x=-192;
