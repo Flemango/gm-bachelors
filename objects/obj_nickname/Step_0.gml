@@ -8,6 +8,9 @@ if (keyboard_check(vk_enter)) pressed=true;
 else pressed=false;
 
 if (keyboard_check_released(vk_enter))
-	room_goto(room_menu);
-	
+{
+	instance_create_depth(x, y, depth, obj_hiscore);
+	instance_destroy(self);
+}
+
 if (alarm[0]==-1) alarm[0]=switch_time;

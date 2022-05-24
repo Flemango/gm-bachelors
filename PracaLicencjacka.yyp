@@ -43,6 +43,7 @@
     {"id":{"name":"level_bg","path":"sprites/level_bg/level_bg.yy",},"order":0,},
     {"id":{"name":"spr_confirm","path":"sprites/spr_confirm/spr_confirm.yy",},"order":3,},
     {"id":{"name":"spr_kickstarter","path":"sprites/spr_kickstarter/spr_kickstarter.yy",},"order":4,},
+    {"id":{"name":"save_hiscores","path":"scripts/save_hiscores/save_hiscores.yy",},"order":4,},
     {"id":{"name":"scr_states","path":"scripts/scr_states/scr_states.yy",},"order":0,},
     {"id":{"name":"spr_bat_atk","path":"sprites/spr_bat_atk/spr_bat_atk.yy",},"order":1,},
     {"id":{"name":"spr_slide","path":"sprites/spr_slide/spr_slide.yy",},"order":4,},
@@ -67,8 +68,8 @@
     "children": [],
   },
   "RoomOrderNodes": [
-    {"roomId":{"name":"room_menu","path":"rooms/room_menu/room_menu.yy",},},
     {"roomId":{"name":"room_name","path":"rooms/room_name/room_name.yy",},},
+    {"roomId":{"name":"room_menu","path":"rooms/room_menu/room_menu.yy",},},
     {"roomId":{"name":"room_game","path":"rooms/room_game/room_game.yy",},},
     {"roomId":{"name":"room_options","path":"rooms/room_options/room_options.yy",},},
   ],
