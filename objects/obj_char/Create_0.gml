@@ -2,11 +2,12 @@ xspeed=0;
 //y=room_height/2-(sprite_height/2);
 
 max_x=fps_dependant(1.6); //2
+x_frac=max_x % 1;
 charge_spd=fps_dependant(10); //10
 slide_spd=fps_dependant(5.6); //7
 knockback=fps_dependant(2);
 
-frc=frc_calc(.07,max_x); //friciton 0.083
+frc=frc_calc(.07,max_x); //friciton 0.083 //.07
 
 scale=1;
 image_xscale=scale;

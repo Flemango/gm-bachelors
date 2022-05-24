@@ -139,3 +139,5 @@ if (x<=mask_w/2) x=mask_w/2;
 if (x>=room_width-mask_w/2) x=room_width-mask_w/2;
 
 #endregion
+
+
