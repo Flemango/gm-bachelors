@@ -9,8 +9,8 @@ draw_text(base_w/2, 48, "Hiscores");
 var val1, val2;
 for (var i=0; i<hiscore_len; i++)
 {
-	val1 = ds_grid_get(hiscore_list, i, 0);
-	val2 = ds_grid_get(hiscore_list, i, 1);
+	val1 = ds_grid_get(hiscore_list, 0, i);
+	val2 = ds_grid_get(hiscore_list, 1, i);
 	draw_text(base_w/2, 96+(32*i), string(val1)+" "+string(val2)); //base_w
 }
 

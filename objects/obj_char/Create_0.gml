@@ -6,6 +6,7 @@ x_frac=max_x % 1;
 charge_spd=fps_dependant(10); //10
 slide_spd=fps_dependant(5.6); //7
 knockback=fps_dependant(2);
+cam_speed=fps_dependant(0.1);
 
 frc=frc_calc(.07,max_x); //friciton 0.083 //.07
 
