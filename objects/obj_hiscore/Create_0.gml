@@ -5,7 +5,7 @@ else name="test";
 enter=false;
 fname="hiscores.dat";
 
-if (file_exists(fname))//(ds_exists(hiscore_list, ds_type_grid))
+if (file_exists(fname))
 {
 	hiscore_list = load_hiscores(fname, hiscore_len);
 }

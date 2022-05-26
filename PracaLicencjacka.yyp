@@ -39,6 +39,7 @@
     {"id":{"name":"spr_bat","path":"sprites/spr_bat/spr_bat.yy",},"order":0,},
     {"id":{"name":"f_main","path":"fonts/f_main/f_main.yy",},"order":0,},
     {"id":{"name":"mask_release","path":"sprites/mask_release/mask_release.yy",},"order":3,},
+    {"id":{"name":"spr_melee_idle","path":"sprites/spr_melee_idle/spr_melee_idle.yy",},"order":0,},
     {"id":{"name":"obj_bat","path":"objects/obj_bat/obj_bat.yy",},"order":0,},
     {"id":{"name":"load_hiscores","path":"scripts/load_hiscores/load_hiscores.yy",},"order":5,},
     {"id":{"name":"level_bg","path":"sprites/level_bg/level_bg.yy",},"order":0,},
