@@ -39,9 +39,16 @@ switch (state)
 					spd=dir*run_spd;
 				else 
 				{
-					if collision_line(x+(self_w/2*dir), y, target.x, target.y, child_arr[i], false, true)
-						spd=0; //to fix
-					else spd=dir*run_spd;
+					/*if (x==child_arr[i].x) //if enemies merged against the wall
+					{
+						
+					}
+					else 
+					{*/
+						if collision_line(x+(self_w/2*dir), y, target.x, target.y, child_arr[i], false, true)
+							spd=0;
+						else spd=dir*run_spd;
+					//}
 				}
 			}
 		}
@@ -86,6 +93,16 @@ switch (state)
 	case states.damage:
 		alarm[0]=-1;
 		
+		for (i=0; i<child_len; i++)
+		{
+			if (object_index==child_arr[i])
+			{
+				var other_obj=instance_place(x+self_w/4*dir, y, child_arr[i]); //fixing stacking up against the level border
+				if (other_obj && (other_obj.id.x==mask_w/2 || other_obj.id.x==room_width-mask_w/2))
+					spd=0;
+			}
+		}
+		
 		if (spd==0) 
 		{
 			hit=false;
@@ -106,6 +123,5 @@ if (spd!=0 && state==states.damage)
 	}
 }
 
-var mask_w=bbox_right+1-bbox_left;
 if (x<=mask_w/2) x=mask_w/2;
 if (x>=room_width-mask_w/2) x=room_width-mask_w/2;

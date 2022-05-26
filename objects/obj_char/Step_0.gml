@@ -83,10 +83,11 @@ if (state==states.idle || state==states.run)
 		}
 	}
 	
-	if (explosion)
+	if (explosion && charge_score==max_hp)
 	{
 		state_attack(states.explosion, mask_explosion);
 		xspeed=0;
+		charge_score=0;
 	}
 }
 
@@ -113,6 +114,9 @@ if (state==states.charge)
 
 if (display_hp!=hp)
 	display_hp--;
+	
+if (charge_score>max_hp)
+	charge_score=max_hp;
 	
 if (display_hp<=0) room_goto(room_name);
 

@@ -1,6 +1,9 @@
 xspeed=0;
 //y=room_height/2-(sprite_height/2);
 
+globalvar charge_score;
+charge_score=0;
+
 max_x=fps_dependant(1.6); //2
 x_frac=max_x % 1;
 charge_spd=fps_dependant(10); //10

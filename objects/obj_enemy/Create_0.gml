@@ -35,4 +35,6 @@ child_arr = [
 	obj_skeleton
 ]
 
+mask_w=bbox_right+1-bbox_left;
+
 child_len = array_length(child_arr);
