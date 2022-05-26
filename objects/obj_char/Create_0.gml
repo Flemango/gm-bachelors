@@ -32,6 +32,7 @@ states = {
 	slide: new State(spr_slide),
 	charge: new State(spr_charge),
 	release: new State(spr_release),
+	explosion: new State(spr_explosion),
 	
 	basic1: new State(spr_attack1),
 	basic2: new State(spr_attack2),
@@ -42,6 +43,7 @@ states = {
 }
 
 states.release.StateOnEnd(states.idle);
+states.explosion.StateOnEnd(states.idle);
 states.slide.StateOnEnd(states.idle);
 
 states.basic1.StateOnEnd(states.idle);

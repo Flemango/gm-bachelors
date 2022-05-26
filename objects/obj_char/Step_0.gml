@@ -12,6 +12,7 @@ var right=keyboard_check(vk_right);
 var slide=keyboard_check_pressed(vk_down);
 
 var attack=mouse_check_button_pressed(mb_left);
+var explosion=keyboard_check_pressed(vk_space);
 
 var charge=mouse_check_button(mb_right);
 var release=mouse_check_button_released(mb_right);
@@ -81,6 +82,12 @@ if (state==states.idle || state==states.run)
 			break;
 		}
 	}
+	
+	if (explosion)
+	{
+		state_attack(states.explosion, mask_explosion);
+		xspeed=0;
+	}
 }
 
 if (state==states.charge)
@@ -116,8 +123,6 @@ if (state==states.damage)
 	
 	/*if (image_xscale>0) xspeed=-knockback;
 			else xspeed=knockback;*/
-		
-	
 }
 
 if (xspeed<0 && (state==states.idle  || xspeed<-max_x))

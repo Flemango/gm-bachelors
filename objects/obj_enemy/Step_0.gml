@@ -40,7 +40,7 @@ switch (state)
 				else 
 				{
 					if collision_line(x+(self_w/2*dir), y, target.x, target.y, child_arr[i], false, true)
-						spd=0;
+						spd=0; //to fix
 					else spd=dir*run_spd;
 				}
 			}
