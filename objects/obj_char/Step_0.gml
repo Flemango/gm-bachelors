@@ -6,6 +6,7 @@ if (global.pause) {
 image_speed=1;
 
 hp_x=camera_get_view_x(view_camera[0])+16;
+var gamespd=game_get_speed(gamespeed_fps);
 
 var left=keyboard_check(vk_left);
 var right=keyboard_check(vk_right);
@@ -62,7 +63,7 @@ if (state==states.idle || state==states.run)
 	if (attack)
 	{
 		xspeed=0;
-		var gamespd=game_get_speed(gamespeed_fps);
+		
 		
 		switch(combo)
 		{
@@ -118,15 +119,24 @@ if (display_hp!=hp)
 if (charge_score>max_hp)
 	charge_score=max_hp;
 	
-if (display_hp<=0) room_goto(room_name);
+if (display_hp<=0)
+{
+	hit=true;
+	state_set(states.death);
+	xspeed=0;
+	depth=-1;
+	if (alarm[1]==-1) alarm[1]=gamespd*1.5;
+	
+	if (image_index>=(image_number-1))
+	{
+		image_speed=0;
+	}
+}
 
 if (state==states.damage)
 {
 	hit=true;
 	show_debug_message("hp: "+string(hp));
-	
-	/*if (image_xscale>0) xspeed=-knockback;
-			else xspeed=knockback;*/
 }
 
 if (xspeed<0 && (state==states.idle  || xspeed<-max_x))

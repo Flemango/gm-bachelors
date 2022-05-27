@@ -14,6 +14,7 @@ cam_speed=fps_dependant(0.05);
 frc=frc_calc(.07,max_x); //friciton 0.083 //.07
 
 scale=1;
+depth=1;
 image_xscale=scale;
 image_yscale=scale;
 
@@ -41,7 +42,8 @@ states = {
 	basic2: new State(spr_attack2),
 	basic3: new State(spr_attack3),
 	
-	damage: new State(spr_dmg)
+	damage: new State(spr_dmg),
+	death: new State(spr_death)
 	//explosion: new State(),
 }
 

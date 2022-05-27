@@ -39,16 +39,9 @@ switch (state)
 					spd=dir*run_spd;
 				else 
 				{
-					/*if (x==child_arr[i].x) //if enemies merged against the wall
-					{
-						
-					}
-					else 
-					{*/
-						if collision_line(x+(self_w/2*dir), y, target.x, target.y, child_arr[i], false, true)
-							spd=0;
-						else spd=dir*run_spd;
-					//}
+					if collision_line(x+(self_w/2*dir), y, target.x, target.y, child_arr[i], false, true)
+						spd=0;
+					else spd=dir*run_spd;
 				}
 			}
 		}
@@ -82,10 +75,10 @@ switch (state)
 			with (target)
 			{
 				if (!hit) {
-					hp-=enemy.atk_dmg;
+					state_set(states.damage);
 					xspeed=knockback*sign(x-enemy.x);
+					hp-=enemy.atk_dmg;
 				} 
-				state_set(states.damage);
 			}
 		}
 	break;
