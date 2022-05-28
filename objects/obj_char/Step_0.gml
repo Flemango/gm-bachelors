@@ -116,9 +116,6 @@ if (state==states.charge)
 if (display_hp!=hp)
 	display_hp--;
 	
-if (charge_score>max_hp)
-	charge_score=max_hp;
-	
 if (display_hp<=0)
 {
 	hit=true;
@@ -158,6 +155,9 @@ if (xspeed>0 && (state==states.idle || xspeed>max_x))
 var mask_w=bbox_right+1-bbox_left;
 if (x<=mask_w/2) x=mask_w/2;
 if (x>=room_width-mask_w/2) x=room_width-mask_w/2;
+
+hp=clamp(hp, 0, max_hp);
+charge_score=clamp(charge_score, 0, max_hp);
 
 #endregion
 
