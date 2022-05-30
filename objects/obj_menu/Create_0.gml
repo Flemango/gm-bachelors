@@ -8,10 +8,14 @@ move_arrows=0;
 carousel_x=-192;
 
 pos=0;
+op_length=4;
+
+option = array_create(op_length);
 
 option[0]="Start Game";
 option[1]="Options";
-option[2]="Quit";
+option[2]="About";
+option[3]="Quit";
 
 op_length = array_length(option);
 
