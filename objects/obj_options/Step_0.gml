@@ -9,6 +9,12 @@ var right=(keyboard_check_pressed(vk_right));
 escape=(keyboard_check(vk_escape));
 enter=(keyboard_check(vk_enter));
 
+if (keyboard_check_pressed(vk_anykey)) 
+{
+	var effect=audio_play_sound(s_effect, 1, false);
+	audio_sound_gain(effect, global.s_volume/10, 0);
+}
+
 arrow_space=64;
 
 if ((keyboard_check(vk_left) || keyboard_check(vk_right)) && pos<2) arrow_space=68;
@@ -68,7 +74,11 @@ if (col_select)
 	{
 		if (hmove!=0)
 		{
-			if (pos==0) global.m_volume+=hmove;
+			if (pos==0) 
+			{
+				global.m_volume+=hmove;
+				audio_sound_gain(global.music, global.m_volume/10, 0);
+			}
 			if (pos==1) global.s_volume+=hmove;
 			
 			global.m_volume=clamp(global.m_volume, 0, 10);

@@ -21,3 +21,7 @@ depth=-99;
 dark=.3;
 
 light_surf = surface_create(room_width, room_height);
+
+global.music=audio_play_sound(s_music, 1, true);
+
+

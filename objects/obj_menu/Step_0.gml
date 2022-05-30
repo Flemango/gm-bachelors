@@ -4,6 +4,12 @@ if (keyboard_check_pressed(vk_right) && pos<op_length-1) pos++;
 arrow_space=60;
 if (keyboard_check(vk_left) || keyboard_check(vk_right)) arrow_space=64;
 
+if (keyboard_check_pressed(vk_anykey)) 
+{
+	var effect=audio_play_sound(s_effect, 1, false);
+	audio_sound_gain(effect, global.s_volume/10, 0);
+}
+
 if (keyboard_check_pressed(vk_enter))
 {
 	switch (pos)
