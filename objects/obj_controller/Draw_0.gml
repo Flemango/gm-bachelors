@@ -48,6 +48,12 @@ if (global.pause)
 	draw_text(cam_x+base_w/2-48, cam_y+base_h/2+24, "Quit to Menu");
 	
 	draw_sprite(spr_arrow, 0, cam_x+base_w/2-64, cam_y+base_h/2-24+(48*pause_pos));
+	
+	if (keyboard_check_pressed(vk_anykey)) 
+	{
+		var effect=audio_play_sound(s_effect, 1, false);
+		audio_sound_gain(effect, global.s_volume/10, 0);
+	}
 }
 
 draw_set_font(f_small);
