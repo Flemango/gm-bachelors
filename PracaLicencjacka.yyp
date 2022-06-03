@@ -9,6 +9,7 @@
     {"id":{"name":"spr_dmg","path":"sprites/spr_dmg/spr_dmg.yy",},"order":6,},
     {"id":{"name":"spr_enemy_atk","path":"sprites/spr_enemy_atk/spr_enemy_atk.yy",},"order":3,},
     {"id":{"name":"spr_release","path":"sprites/spr_release/spr_release.yy",},"order":3,},
+    {"id":{"name":"spr_melee_run","path":"sprites/spr_melee_run/spr_melee_run.yy",},"order":1,},
     {"id":{"name":"obj_hiscore","path":"objects/obj_hiscore/obj_hiscore.yy",},"order":1,},
     {"id":{"name":"spr_explosion","path":"sprites/spr_explosion/spr_explosion.yy",},"order":4,},
     {"id":{"name":"spr_attack2","path":"sprites/spr_attack2/spr_attack2.yy",},"order":1,},
