@@ -18,11 +18,16 @@ function state_set(_state) constructor
 	image_speed=1;
 }
 
-function state_attack(_state, _mask) : state_set(_state) constructor
+function state_attack(_state, _mask, _obj) : state_set(_state) constructor
 {	
 	if (!instance_exists(obj_hitbox))
 	{
-		var _hitbox = instance_create_depth(x,y, obj_char.depth-1, obj_hitbox);
+		var _hitbox;
+		if (_obj==self)
+			_hitbox = _obj;
+		else
+			_hitbox = instance_create_depth(x,y, obj_char.depth-1, obj_hitbox);
+		
 		_hitbox.sprite_index=sprite_index;
 		_hitbox.mask_index=_mask;
 	

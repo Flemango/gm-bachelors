@@ -55,6 +55,7 @@ switch (state)
 	
 	case states.prepare:
 		spd=0;
+		mask_index=sprite_index;
 		
 		if (alarm[0]==-1)
 		{
@@ -69,7 +70,7 @@ switch (state)
 	break;
 	
 	case states.attack:
-		if (place_meeting(x, y, target))
+		/*if (place_meeting(x, y, target))
 		{
 			var enemy=self;
 			with (target)
@@ -80,7 +81,7 @@ switch (state)
 					hp-=enemy.atk_dmg;
 				} 
 			}
-		}
+		}*/
 	break;
 	
 	case states.damage:
