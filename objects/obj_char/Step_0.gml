@@ -50,7 +50,7 @@ if (state==states.idle || state==states.run)
 	if (charge)
 		state_set(states.charge);
 		
-	if (slide)
+	if (slide && can_slide)
 	{
 		if (image_xscale>0) xspeed=slide_spd;
 		else xspeed=-slide_spd;
@@ -58,6 +58,8 @@ if (state==states.idle || state==states.run)
 		frc=frc_calc(1.16, slide_spd);
 		show_debug_message("frc: "+string(frc));
 		state_set(states.slide);
+		can_slide=false;
+		alarm[2]=gamespd*1.2;
 	}
 	
 	if (attack)

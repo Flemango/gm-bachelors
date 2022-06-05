@@ -1,12 +1,14 @@
-if (hit==false)
+if (!hit)
 {
 	state=states.damage;
+	
 	dir=sign(obj_char.x-x);
 	dir=-dir;
-	spd=dir*knockback_spd*irandom_range(0.8, 1.2);
-	hit=true;
-	score+=10;
-	charge_score+=2.5;
+	spd=dir*knockback_spd*irandom_range(0.5, 1.5);
+	
+	show_debug_message("HP: "+string(hp));
+	show_debug_message("Score: "+string(score));
+	show_debug_message("hit: "+string(hit));
 }
 
 //instance_destroy(other);

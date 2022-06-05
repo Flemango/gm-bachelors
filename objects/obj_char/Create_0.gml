@@ -10,6 +10,8 @@ charge_spd=fps_dependant(10); //10
 slide_spd=fps_dependant(5.6); //7
 knockback=fps_dependant(2);
 cam_speed=fps_dependant(0.05);
+can_slide=true;
+slide_cd=1.2;
 
 frc=frc_calc(.07,max_x); //friciton 0.083 //.07
 
@@ -20,6 +22,8 @@ image_yscale=scale;
 
 combo=0;
 hit=false; //check if already damaged to avoid double dmg
+dmg=40;
+charge_val=5;
 
 max_hp=100;
 hp=max_hp;

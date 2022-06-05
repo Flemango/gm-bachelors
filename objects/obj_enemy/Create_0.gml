@@ -14,6 +14,7 @@ aggro_check=false;
 aggro_check_dur=fps_dependant(5);
 attack_cd=1.5;
 atk_dmg=1;
+hp=1000;
 
 states = {
 	idle: new State(spr_enemy_idle),

@@ -12,11 +12,12 @@ var self_w=bbox_right-bbox_left;
 
 x+=spd;
 
-image_xscale=sign(target.x-x);
+if (state!=states.die) image_xscale=sign(target.x-x);
 
 switch (state)
 {
 	case states.idle:
+		hit=false;
 		spd=0;
 		
 		if (++aggro_check>=aggro_check_dur)
@@ -98,15 +99,22 @@ switch (state)
 		}
 		
 		if (spd==0) 
-		{
-			hit=false;
 			state_set(states.idle);
-		}
+	break;
+	
+	case states.die:
+		hit=true;
+		depth=99;
+		
+		if (image_index>=(image_number-1))
+			image_speed=0;
+			
+		if (alarm[1]=-1) alarm[1]=game_spd*2;
 	break;
 }
 
 //friction
-if (spd!=0 && state==states.damage)
+if (spd!=0 && (state==states.damage || state==states.die))
 {
 	spd+=frc*-dir;
 	
@@ -115,6 +123,24 @@ if (spd!=0 && state==states.damage)
 		if ((dir>0 && spd<0) || (dir<0 && spd>0))
 		spd=0;
 	}
+}
+
+if (hp<=0)
+{
+	hit=true;
+	hp=0;
+	state_set(states.die);
+}
+
+if (state==states.damage)
+{
+	if (!hit)
+	{
+		score+=10;
+		charge_score+=obj_char.charge_val;
+		hp-=obj_char.dmg;
+	}
+	hit=true;
 }
 
 if (x<=mask_w/2) x=mask_w/2;
