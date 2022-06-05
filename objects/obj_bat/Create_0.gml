@@ -15,8 +15,8 @@ states = {
 	idle: new State(spr_bat),
 	chase: new State(spr_bat),
 	prepare: new State(spr_bat),
-	attack: new State(spr_enemy_atk),
-	damage: new State(spr_bat),
+	attack: new State(spr_bat_atk),
+	damage: new State(spr_bat_dmg),
 	die: new State(spr_bat)
 }
 

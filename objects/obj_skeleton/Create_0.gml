@@ -5,7 +5,7 @@ states = {
 	chase: new State(spr_melee_run),
 	prepare: new State(spr_melee_idle),
 	attack: new State(spr_melee_atk),
-	damage: new State(spr_melee_idle),
+	damage: new State(spr_melee_dmg),
 	die: new State(spr_melee_death)
 }
 

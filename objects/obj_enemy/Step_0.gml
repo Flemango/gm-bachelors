@@ -71,18 +71,7 @@ switch (state)
 	break;
 	
 	case states.attack:
-		/*if (place_meeting(x, y, target))
-		{
-			var enemy=self;
-			with (target)
-			{
-				if (!hit) {
-					state_set(states.damage);
-					xspeed=knockback*sign(x-enemy.x);
-					hp-=enemy.atk_dmg;
-				} 
-			}
-		}*/
+		
 	break;
 	
 	case states.damage:
@@ -92,11 +81,14 @@ switch (state)
 		{
 			if (object_index==child_arr[i])
 			{
+				sprite_index=object_index.state.sprite; //fixing not displaying dmg animation probably cus of looping
 				var other_obj=instance_place(x+self_w/4*dir, y, child_arr[i]); //fixing stacking up against the level border
 				if (other_obj && (other_obj.id.x==mask_w/2 || other_obj.id.x==room_width-mask_w/2))
 					spd=0;
 			}
 		}
+		
+		show_debug_message("aaaaagfdgfdgfd");
 		
 		if (spd==0) 
 			state_set(states.idle);
@@ -112,6 +104,7 @@ switch (state)
 		if (alarm[1]=-1) alarm[1]=game_spd*2;
 	break;
 }
+
 
 //friction
 if (spd!=0 && (state==states.damage || state==states.die))
