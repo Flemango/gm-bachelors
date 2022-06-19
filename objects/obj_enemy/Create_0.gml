@@ -33,9 +33,12 @@ state=states.idle;
 
 child_arr = [
 	obj_bat,
-	obj_skeleton
+	obj_skeleton, 
+	obj_archer
 ]
 
 mask_w=bbox_right+1-bbox_left;
 
 child_len = array_length(child_arr);
+global.enemy_count++;
+show_debug_message("no of enemies: "+string(global.enemy_count));

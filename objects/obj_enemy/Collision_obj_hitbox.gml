@@ -2,6 +2,7 @@ if (!hit)
 {
 	state=states.damage;
 	
+	image_index=0;
 	dir=sign(obj_char.x-x);
 	dir=-dir;
 	spd=dir*knockback_spd*irandom_range(0.5, 1.5);

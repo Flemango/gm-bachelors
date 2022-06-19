@@ -1,4 +1,5 @@
 global.pause=false;
+
 global.show_fps=false;
 
 global.m_volume=5;
@@ -24,4 +25,4 @@ light_surf = surface_create(room_width, room_height);
 
 global.music=audio_play_sound(s_music, 1, true);
 
-
+global.enemy_count=0;

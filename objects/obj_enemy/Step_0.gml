@@ -75,7 +75,12 @@ switch (state)
 	break;
 	
 	case states.damage:
+	//var reset=false;
 		alarm[0]=-1;
+		/*if (!reset) {
+			sprite_index=0;
+			reset=true;
+		}*/
 		
 		for (i=0; i<child_len; i++)
 		{

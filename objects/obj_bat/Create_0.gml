@@ -23,3 +23,4 @@ states = {
 state=states.idle;
 
 atk_dmg=20;
+hp=50;

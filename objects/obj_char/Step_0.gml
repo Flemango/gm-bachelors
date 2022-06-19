@@ -56,7 +56,7 @@ if (state==states.idle || state==states.run)
 		else xspeed=-slide_spd;
 		
 		frc=frc_calc(1.16, slide_spd);
-		show_debug_message("frc: "+string(frc));
+		//show_debug_message("frc: "+string(frc));
 		state_set(states.slide);
 		can_slide=false;
 		alarm[2]=gamespd*1.2;
@@ -65,7 +65,6 @@ if (state==states.idle || state==states.run)
 	if (attack)
 	{
 		xspeed=0;
-		
 		
 		switch(combo)
 		{
