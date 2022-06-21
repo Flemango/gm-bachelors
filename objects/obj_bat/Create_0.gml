@@ -17,7 +17,7 @@ states = {
 	prepare: new State(spr_bat),
 	attack: new State(spr_bat_atk),
 	damage: new State(spr_bat_dmg),
-	die: new State(spr_bat)
+	die: new State(spr_bat_die)
 }
 
 state=states.idle;
