@@ -49,9 +49,17 @@ switch (state)
 		
 		if (distance_to_object(target) > aggro_range)
 			state_set(states.idle);
-			
-		if (place_meeting(x, y, target))
-			state_set(states.prepare);
+		
+		if (archer)
+		{
+			if (distance_to_object(target) < atk_range)
+				state_set(states.prepare);
+		}
+		else
+		{
+			if (place_meeting(x, y, target))
+				state_set(states.prepare);
+		}
 	break;
 	
 	case states.prepare:
@@ -60,18 +68,39 @@ switch (state)
 		
 		if (alarm[0]==-1)
 		{
-			if (place_meeting(x,y, target))
+			if (archer)
 			{
-				alarm[0]=game_spd*attack_cd;
-				show_debug_message(alarm[0]);
+				if (distance_to_object(target) < atk_range+16)
+				{
+					alarm[0]=game_spd*attack_cd;
+					show_debug_message(alarm[0]);
+				}
+				else
+					state_set(states.chase);
 			}
-			else
-				state_set(states.chase);
+			else 
+			{
+				if (place_meeting(x,y, target))
+				{
+					alarm[0]=game_spd*attack_cd;
+					show_debug_message(alarm[0]);
+				}
+				else
+					state_set(states.chase);
+			}
+			
 		}
 	break;
 	
 	case states.attack:
-		
+		if (archer)
+		{
+			if (!shot)
+			{
+			obj=instance_create_depth(x,y,depth+1, obj_arrow);
+			shot=true;
+			}
+		}
 	break;
 	
 	case states.damage:
@@ -92,7 +121,6 @@ switch (state)
 					spd=0;
 			}
 		}
-		
 		show_debug_message("aaaaagfdgfdgfd");
 		
 		if (spd==0) 

@@ -3,6 +3,7 @@ dir=0;
 hit=false;
 game_spd=game_get_speed(gamespeed_fps);
 
+
 run_spd=fps_dependant(1);
 knockback_spd=fps_dependant(10);
 frc=frc_calc(.066, run_spd);
@@ -12,9 +13,14 @@ see_range=128;
 aggro_range=256;
 aggro_check=false;
 aggro_check_dur=fps_dependant(5);
-attack_cd=1.5;
+attack_cd=1.5; //1.5
+
 atk_dmg=1;
 hp=1000;
+
+archer=false;
+atk_range=48;
+shot=false;
 
 states = {
 	idle: new State(spr_enemy_idle),

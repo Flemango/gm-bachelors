@@ -17,3 +17,7 @@ state=states.idle;
 
 atk_dmg=30;
 hp=100;
+attack_cd=3;
+
+archer=true;
+atk_range=192;
