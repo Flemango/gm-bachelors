@@ -6,7 +6,7 @@ event_inherited();
 
 states = {
 	idle: new State(spr_enemy_idle),
-	chase: new State(spr_enemy_idle),
+	chase: new State(spr_archer_run),
 	prepare: new State(spr_enemy_idle),
 	attack: new State(spr_enemy_atk),
 	damage: new State(spr_enemy_dmg),
@@ -20,4 +20,4 @@ hp=100;
 attack_cd=3;
 
 archer=true;
-atk_range=192;
+atk_range=128;

@@ -5,7 +5,14 @@ if (global.enemy_count<=0)
 	if (place_meeting(x,y,obj_char)) 
 	{
 		collides=true;
-		if (keyboard_check_pressed(vk_up)) room_restart();
+		if (keyboard_check_pressed(vk_up)) 
+		{
+			var lay = layer_get_name("transition");
+			var seq = layer_sequence_create(lay,camera_get_view_x(view_camera[0]),camera_get_view_y(view_camera[0]),transition_out);
+			layer_sequence_xscale(seq, 2);
+			layer_sequence_yscale(seq, 2);
+			if (alarm[0]==-1) alarm[0]=game_get_speed(gamespeed_fps);
+		}
 	}
 	else 
 		collides=false;

@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "ranged skeleton",
-    "path": "folders/sprites/enemies/ranged skeleton.yy",
+    "name": "archer skeleton",
+    "path": "folders/sprites/enemies/archer skeleton.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_archer_arrow",
