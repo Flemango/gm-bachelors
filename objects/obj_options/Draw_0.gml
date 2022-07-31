@@ -5,6 +5,8 @@ var color=c_grey;
 draw_set_font(f_main);
 draw_set_valign(fa_center);
 
+draw_sprite_stretched(winieta, 0, 0, 0, room_width, room_height);
+
 draw_set_color(col1);
 draw_set_halign(fa_right);
 draw_text(x-op_space, op_space, "Screen"); //0

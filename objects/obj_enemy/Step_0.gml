@@ -97,8 +97,8 @@ switch (state)
 		{
 			if (!shot)
 			{
-			obj=instance_create_depth(x,y,depth+1, obj_arrow);
-			shot=true;
+				obj=instance_create_depth(x,y-14,depth+1, obj_arrow);
+				shot=true;
 			}
 		}
 	break;

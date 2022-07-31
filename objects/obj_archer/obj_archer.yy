@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_enemy_chase",
-    "path": "sprites/spr_enemy_chase/spr_enemy_chase.yy",
+    "name": "spr_archer_idle",
+    "path": "sprites/spr_archer_idle/spr_archer_idle.yy",
   },
   "solid": false,
   "visible": true,

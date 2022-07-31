@@ -2,6 +2,8 @@ draw_set_font(f_main);
 draw_set_valign(fa_center);
 draw_set_halign(fa_center);
 
+draw_sprite_stretched(winieta, 0, 0, 0, room_width, room_height);
+
 for (var i=0; i<op_length; i++)
 {
 	draw_set_color(c_white);
