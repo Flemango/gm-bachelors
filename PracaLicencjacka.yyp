@@ -45,6 +45,7 @@
     {"id":{"name":"obj_hitbox","path":"objects/obj_hitbox/obj_hitbox.yy",},"order":1,},
     {"id":{"name":"spr_attack1","path":"sprites/spr_attack1/spr_attack1.yy",},"order":0,},
     {"id":{"name":"spr_door","path":"sprites/spr_door/spr_door.yy",},"order":6,},
+    {"id":{"name":"spr_archer_death","path":"sprites/spr_archer_death/spr_archer_death.yy",},"order":5,},
     {"id":{"name":"spr_chargebar","path":"sprites/spr_chargebar/spr_chargebar.yy",},"order":1,},
     {"id":{"name":"spr_gonext","path":"sprites/spr_gonext/spr_gonext.yy",},"order":8,},
     {"id":{"name":"room_about","path":"rooms/room_about/room_about.yy",},"order":2,},
