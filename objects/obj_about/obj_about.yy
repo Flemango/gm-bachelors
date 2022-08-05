@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "level_about",
+    "path": "sprites/level_about/level_about.yy",
+  },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,

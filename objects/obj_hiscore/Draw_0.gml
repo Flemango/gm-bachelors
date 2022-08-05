@@ -3,6 +3,8 @@ draw_set_color(c_white);
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
 
+draw_sprite_stretched(winieta, 0, 0, 0, room_width, room_height);
+
 draw_sprite(spr_confirm, 0, base_w/2, 48);
 draw_text(base_w/2, 48, "Hiscores");
 
