@@ -3,7 +3,6 @@ dir=0;
 hit=false;
 game_spd=game_get_speed(gamespeed_fps);
 
-
 run_spd=fps_dependant(1);
 knockback_spd=fps_dependant(10);
 frc=frc_calc(.066, run_spd);
@@ -40,10 +39,13 @@ state=states.idle;
 child_arr = [
 	obj_bat,
 	obj_skeleton, 
-	obj_archer
+	obj_dark_skeleton, 
+	obj_archer,
 ]
 
 mask_w=bbox_right+1-bbox_left;
+
+image_index=irandom_range(0, image_number-1);
 
 child_len = array_length(child_arr);
 global.enemy_count++;

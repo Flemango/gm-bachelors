@@ -32,9 +32,11 @@ switch (state)
 	case states.chase:
 		dir=sign(target.x-x);
 		
+		var index_holder=object_index;
+		if (object_index==obj_dark_skeleton) index_holder=obj_skeleton; //quick fix for dark skeleton not to pass thru regular skeletons (delete if theyre not gonna be both in the game at the same time)
 		for (i=0; i<child_len; i++)
 		{
-			if (object_index==child_arr[i])
+			if (index_holder==child_arr[i])
 			{
 				if (!place_meeting(x+self_w/4*dir, y, child_arr[i]))
 					spd=dir*run_spd;
