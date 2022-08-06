@@ -52,6 +52,7 @@ if (col_select)
 				game_set_speed(fps_arr[fps_pos][1], gamespeed_fps);
 				show_debug_message(string(game_get_speed(gamespeed_fps)));
 				window_set_fullscreen(checked);
+				layer_hspeed(back_layer, fps_dependant(-0.5));
 				set_cam_res();
 				
 				//test

@@ -21,3 +21,6 @@ op_length = array_length(option);
 
 keyboard_set_map(ord("A"), vk_left);
 keyboard_set_map(ord("D"), vk_right);
+
+back_layer = layer_get_id("Background");
+layer_hspeed(back_layer, fps_dependant(-0.5));

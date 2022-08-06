@@ -23,6 +23,7 @@ if (room==room_game)
 		if(pause_pos)
 		{
 			global.pause=false;
+			global.enemy_count=0;
 			room_goto(room_menu);
 		}
 		else

@@ -31,7 +31,7 @@ if (keyboard_check_pressed(vk_enter))
 
 if (keyboard_check_pressed(vk_escape))
 {
-	if (pos!=2) pos=2;
+	if (pos!=op_length-1) pos=op_length-1;
 	else game_end();
 }
 	

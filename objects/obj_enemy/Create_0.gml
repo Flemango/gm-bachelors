@@ -40,6 +40,7 @@ child_arr = [
 	obj_bat,
 	obj_skeleton, 
 	obj_dark_skeleton, 
+	obj_baby_skeleton,
 	obj_archer,
 ]
 

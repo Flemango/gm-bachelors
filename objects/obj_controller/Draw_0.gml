@@ -40,7 +40,8 @@ if (global.pause)
 	draw_set_valign(fa_middle);
 	
 	draw_set_alpha(0.75);
-	draw_roundrect_ext(cam_x+base_w/2-size_w/2, cam_y+base_h/2-size_h/2, cam_x+base_w/2+size_w/2, cam_y+base_h/2+size_h/2, 48, 48, 0);
+	draw_sprite(spr_pausebox, 0, cam_x+base_w/2, cam_y+base_h/2);
+	//draw_roundrect_ext(cam_x+base_w/2-size_w/2, cam_y+base_h/2-size_h/2, cam_x+base_w/2+size_w/2, cam_y+base_h/2+size_h/2, 48, 48, 0);
 	draw_set_alpha(1);
 	
 	draw_set_color(c_white);
