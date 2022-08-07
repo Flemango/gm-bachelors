@@ -16,7 +16,7 @@ slide_cd=1.2;
 frc=frc_calc(.07,max_x); //friciton 0.083 //.07
 
 scale=1;
-depth=1;
+depth=-99;
 image_xscale=scale;
 image_yscale=scale;
 

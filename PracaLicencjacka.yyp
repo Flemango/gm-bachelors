@@ -91,6 +91,7 @@
     {"id":{"name":"spr_b_light","path":"sprites/spr_b_light/spr_b_light.yy",},"order":5,},
     {"id":{"name":"spr_slide","path":"sprites/spr_slide/spr_slide.yy",},"order":5,},
     {"id":{"name":"spr_bat_die","path":"sprites/spr_bat_die/spr_bat_die.yy",},"order":3,},
+    {"id":{"name":"spr_infobox","path":"sprites/spr_infobox/spr_infobox.yy",},"order":7,},
     {"id":{"name":"spr_baby_idle","path":"sprites/spr_baby_idle/spr_baby_idle.yy",},"order":0,},
     {"id":{"name":"spr_baby_run","path":"sprites/spr_baby_run/spr_baby_run.yy",},"order":1,},
     {"id":{"name":"mask_attack1","path":"sprites/mask_attack1/mask_attack1.yy",},"order":0,},

@@ -24,10 +24,15 @@ if (room==room_game)
 		{
 			global.pause=false;
 			global.enemy_count=0;
+			global.wave=1;
+
 			room_goto(room_menu);
 		}
 		else
 			global.pause=false;
 	}
+	
+	if (global.pause) depth=-100;
+	else depth=-98
 }
 

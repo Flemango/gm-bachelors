@@ -1,6 +1,6 @@
 #region //lighting
 
-if (room=room_game)
+if (room==room_game)
 {
 	if (surface_exists(light_surf))
 	{
