@@ -47,7 +47,7 @@
     "spriteId": {"name":"spr_baby_run","path":"sprites/spr_baby_run/spr_baby_run.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 8.0,
+    "playbackSpeed": 10.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
