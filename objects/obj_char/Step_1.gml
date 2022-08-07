@@ -5,7 +5,7 @@ if (global.pause) {
 cam_x=camera_get_view_x(view_camera[0]);
 
 var target = self;
-var target_x = target.x-camera_get_view_width(view_camera[0])*.6;
+var target_x = target.x-camera_get_view_width(view_camera[0])*.5;
 	
 var camx = lerp(cam_x, target_x, cam_speed);
 camx = clamp(camx, 0, room_width-camera_get_view_width(view_camera[0]));

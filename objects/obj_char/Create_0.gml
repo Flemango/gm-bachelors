@@ -1,5 +1,5 @@
 xspeed=0;
-//y=room_height/2-(sprite_height/2);
+arrow_shown=false;
 
 globalvar charge_score;
 if (global.wave==1) charge_score=0;

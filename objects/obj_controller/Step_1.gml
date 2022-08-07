@@ -18,7 +18,7 @@ if (room==room_game)
 		
 	pause_pos=clamp(pause_pos, 0, 1);
 	
-	if (keyboard_check_pressed(vk_enter))
+	if (keyboard_check_pressed(vk_enter) && global.pause)
 	{
 		if(pause_pos)
 		{
@@ -34,5 +34,7 @@ if (room==room_game)
 	
 	if (global.pause) depth=-100;
 	else depth=-98
+	
+	
 }
 

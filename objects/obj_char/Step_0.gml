@@ -122,7 +122,7 @@ if (display_hp<=0)
 	hit=true;
 	state_set(states.death);
 	xspeed=0;
-	depth=-1;
+	//depth=-1;
 	if (alarm[1]==-1) alarm[1]=gamespd*1.5;
 	
 	if (image_index>=(image_number-1))
@@ -159,6 +159,12 @@ if (x>=room_width-mask_w/2) x=room_width-mask_w/2;
 
 hp=clamp(hp, 0, max_hp);
 charge_score=clamp(charge_score, 0, max_hp);
+
+if (!arrow_shown && room==room_game && global.enemy_count==0)
+{
+	instance_create_depth(x, base_h/3, depth, obj_helping_arrow);
+	arrow_shown=true;
+}
 
 #endregion
 
