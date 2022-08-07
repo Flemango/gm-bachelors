@@ -8,6 +8,7 @@ if (global.enemy_count<=0)
 		if (keyboard_check_pressed(vk_up)) 
 		{
 			var lay = layer_get_name("transition");
+			//layer_depth(lay, depth);
 			var seq = layer_sequence_create(lay,camera_get_view_x(view_camera[0]),camera_get_view_y(view_camera[0]),transition_out);
 			layer_sequence_xscale(seq, 2);
 			layer_sequence_yscale(seq, 2);

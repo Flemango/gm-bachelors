@@ -1,4 +1,5 @@
 global.pause=false;
+global.wave=1;
 
 global.show_fps=false;
 
@@ -19,7 +20,7 @@ cam_y=camera_get_view_y(view_camera[0]);
 pause_pos=0;
 
 depth=-99;
-dark=.3;
+//dark=.3;
 
 light_surf = surface_create(room_width, room_height);
 

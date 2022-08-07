@@ -18,6 +18,12 @@ if (room==room_game)
 	draw_sprite_ext(spr_healthbar_bg, 0, hp_x-32+base_w-hp_width, hp_y,1,1,0,c_aqua,1);
 	draw_sprite_stretched(spr_chargebar, 0, hp_x-32+base_w-hp_width, hp_y, (charge_score/max_hp)*hp_width, hp_height);
 	draw_sprite(spr_healthbar_border, 0, hp_x-32+base_w-(hp_width+2), hp_y);
+	
+	draw_set_color(c_white);
+	draw_set_font(f_small);
+	draw_set_halign(fa_center);
+	draw_text(hp_x-16+base_w-48, 8, "Wave "+string(global.wave));
+	draw_text(hp_x-16+base_w-48, 24, "Points: "+string(score));
 
 	draw_set_color(c_white);
 	draw_set_alpha(1);
