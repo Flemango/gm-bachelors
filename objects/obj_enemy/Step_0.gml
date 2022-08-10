@@ -12,7 +12,10 @@ var self_w=bbox_right-bbox_left;
 
 x+=spd;
 
-if (state!=states.die && state!=states.prepare) image_xscale=sign(target.x-x);
+if (((state!=states.prepare || state!=states.attack) && archer) || (state!=states.attack && !archer))
+{
+	if (state!=states.die) image_xscale=sign(target.x-x);
+}
 
 switch (state)
 {
@@ -67,11 +70,6 @@ switch (state)
 	case states.prepare:
 		spd=0;
 		mask_index=sprite_index;
-		if (archer)
-		{
-			if (alarm[2]==-1)
-			alarm[2]=game_get_speed(gamespeed_fps)*.75;
-		}
 		
 		if (alarm[0]==-1)
 		{
