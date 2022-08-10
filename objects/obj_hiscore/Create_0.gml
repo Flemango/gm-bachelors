@@ -1,7 +1,10 @@
 hiscore_len=5;
+if (!global.only_check)
+{
+	if (!instance_exists(obj_nickname)) name="test";
+	else name=obj_nickname.name;
+}
 
-if (instance_exists(obj_nickname)) name=obj_nickname.name;
-else name="test";
 enter=false;
 fname="hiscores.dat";
 

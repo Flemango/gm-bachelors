@@ -9,7 +9,7 @@ states = {
 	chase: new State(spr_archer_run),
 	prepare: new State(spr_archer_prepare),
 	attack: new State(spr_archer_atk),
-	damage: new State(spr_archer_idle),
+	damage: new State(spr_archer_dmg),
 	die: new State(spr_archer_death)
 }
 

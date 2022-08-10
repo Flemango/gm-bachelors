@@ -20,5 +20,5 @@ draw_set_font(f_small);
 draw_set_valign(fa_bottom);
 draw_set_halign(fa_left);
 draw_set_color(c_white);
-draw_sprite(spr_kickstarter, 0, carousel_x-12, base_h-8)
-draw_text(carousel_x, base_h-2, "Click F1 to check out our kickstarter!");
+//draw_sprite(spr_kickstarter, 0, carousel_x-12, base_h-8)
+draw_text(carousel_x, base_h-2, "2022 Made by Konrad Stepniak");

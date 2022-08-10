@@ -18,12 +18,16 @@ if (keyboard_check_pressed(vk_enter))
 		room_goto(room_game);
 		break;
 	case 1:
-		room_goto(room_options);
+		room_goto(room_name);
+		global.only_check=true;
 		break;
 	case 2:
-		room_goto(room_about);
+		room_goto(room_options);
 		break;
 	case 3:
+		room_goto(room_about);
+		break;
+	case 4:
 		game_end();
 		break;
 	}

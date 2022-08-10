@@ -13,9 +13,10 @@ op_length=4;
 option = array_create(op_length);
 
 option[0]="Start Game";
-option[1]="Options";
-option[2]="Help";
-option[3]="Quit";
+option[1]="Hiscores";
+option[2]="Options";
+option[3]="Help";
+option[4]="Quit";
 
 op_length = array_length(option);
 

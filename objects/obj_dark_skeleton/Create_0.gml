@@ -5,7 +5,7 @@ states = {
 	chase: new State(spr_dark_run),
 	prepare: new State(spr_dark_idle),
 	attack: new State(spr_dark_atk),
-	damage: new State(spr_dark_idle),
+	damage: new State(spr_dark_dmg),
 	die: new State(spr_dark_death)
 }
 

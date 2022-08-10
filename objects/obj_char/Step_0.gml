@@ -134,6 +134,7 @@ if (display_hp<=0)
 if (state==states.damage)
 {
 	hit=true;
+	//instance_destroy(obj_hitbox);
 	show_debug_message("hp: "+string(hp));
 }
 

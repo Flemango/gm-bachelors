@@ -1,5 +1,6 @@
 global.pause=false;
 global.wave=1;
+global.only_check=false;
 
 global.show_fps=false;
 
