@@ -12,6 +12,6 @@ states = {
 state=states.idle;
 
 run_spd=fps_dependant(1.4);
-attack_cd=0.2;
+attack_cd=0.3;
 atk_dmg=10;
 hp=50;

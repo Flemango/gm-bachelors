@@ -14,7 +14,7 @@ x+=spd;
 
 if (((state!=states.prepare || state!=states.attack) && archer) || (state!=states.attack && !archer))
 {
-	if (state!=states.die) image_xscale=sign(target.x-x);
+	if (state!=states.die && target.x!=x) image_xscale=sign(target.x-x);
 }
 
 switch (state)

@@ -16,9 +16,15 @@ for (var i=0; i<op_length; i++)
 draw_sprite_ext(spr_arrow,0,x-arrow_space,y, -1, 1, 0, c_white, 1);
 draw_sprite_ext(spr_arrow,0,x+arrow_space,y , 1, 1, 0, c_white, 1);
 
+draw_set_color(c_white);/*
+draw_set_font(f_logo);
+draw_set_valign(fa_bottom);
+draw_text(room_width/2, room_height/3, "Dungeon Reaper");*/
+draw_sprite(spr_logo, 0, room_width/2, room_height/3);
+
 draw_set_font(f_small);
 draw_set_valign(fa_bottom);
 draw_set_halign(fa_left);
-draw_set_color(c_white);
+
 //draw_sprite(spr_kickstarter, 0, carousel_x-12, base_h-8)
 draw_text(carousel_x, base_h-2, "2022 Made by Konrad Stepniak");

@@ -13,3 +13,5 @@ state=states.idle;
 
 atk_dmg=40;
 hp=150;
+
+attack_cd=1;

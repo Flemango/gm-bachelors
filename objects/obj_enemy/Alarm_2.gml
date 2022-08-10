@@ -1,5 +1,5 @@
 /// @description delay of aiming
-var target=obj_char;
+/*var target=obj_char;
 
 if (image_xscale!=sign(target.x-x))
 {
@@ -10,5 +10,5 @@ if (image_xscale!=sign(target.x-x))
 		image_xscale=1;
 	else
 		image_xscale=-1;
-}
+}*/
 
