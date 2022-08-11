@@ -9,7 +9,7 @@ frc=frc_calc(.066, run_spd);
 
 see_range=128;
 
-aggro_range=256;
+aggro_range=room_width/2;
 aggro_check=false;
 aggro_check_dur=fps_dependant(5);
 attack_cd=1.5; //1.5
