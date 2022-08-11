@@ -56,10 +56,9 @@ if (state==states.idle || state==states.run)
 		else xspeed=-slide_spd;
 		
 		frc=frc_calc(1.16, slide_spd);
-		//show_debug_message("frc: "+string(frc));
 		state_set(states.slide);
 		can_slide=false;
-		alarm[2]=gamespd*1.2;
+		alarm[2]=gamespd*slide_cd;
 	}
 	
 	if (attack)
@@ -69,17 +68,29 @@ if (state==states.idle || state==states.run)
 		switch(combo)
 		{
 		case 0:
-			state_attack(states.basic1, mask_attack1);
+			state_attack(states.basic1, mask_attack1, obj_hitbox);
+			
+			var atk_snd=audio_play_sound(s_swing1, 2, false);
+			audio_sound_gain(atk_snd, global.s_volume/10, 0);
+			
 			combo++;
 			alarm[0]=gamespd*1.2;
 			break;
 		case 1:
-			state_attack(states.basic2, mask_attack2);
+			state_attack(states.basic2, mask_attack2, obj_hitbox);
+			
+			var atk_snd=audio_play_sound(s_swing2, 2, false);
+			audio_sound_gain(atk_snd, global.s_volume/10, 0);
+			
 			combo++;
 			alarm[0]=gamespd*1.2;
 			break;
 		case 2:
-			state_attack(states.basic3, mask_attack3);
+			state_attack(states.basic3, mask_attack3, obj_hitbox);
+			
+			var atk_snd=audio_play_sound(s_swing_hit, 2, false);
+			audio_sound_gain(atk_snd, global.s_volume/10, 0);
+			
 			combo=0;
 			break;
 		}
@@ -87,7 +98,11 @@ if (state==states.idle || state==states.run)
 	
 	if (explosion && charge_score==max_hp)
 	{
-		state_attack(states.explosion, mask_explosion);
+		state_attack(states.explosion, mask_explosion, obj_hitbox);
+		
+		var explode_snd=audio_play_sound(s_explosion, 2, false);
+		audio_sound_gain(explode_snd, global.s_volume/10, 0);
+		
 		xspeed=0;
 		charge_score=0;
 	}
@@ -107,7 +122,10 @@ if (state==states.charge)
 			if (image_xscale>0) xspeed=charge_spd;
 			else xspeed=-charge_spd;
 			
-			state_attack(states.release, mask_release);
+			var atk_snd=audio_play_sound(s_swing2, 2, false);
+			audio_sound_gain(atk_snd, global.s_volume/10, 0);
+			
+			state_attack(states.release, mask_release, obj_hitbox);
 		} 
 		else 
 			state_set(states.idle);
@@ -133,6 +151,11 @@ if (display_hp<=0)
 
 if (state==states.damage)
 {
+	if (!hit)
+	{
+		var dmg_snd=audio_play_sound(s_ouch, 2, false);
+		audio_sound_gain(dmg_snd, global.s_volume/10, 0);
+	}
 	hit=true;
 	//instance_destroy(obj_hitbox);
 	show_debug_message("hp: "+string(hp));

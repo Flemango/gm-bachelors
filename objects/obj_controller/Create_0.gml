@@ -4,7 +4,7 @@ global.only_check=false;
 
 global.show_fps=false;
 
-global.m_volume=5;
+global.m_volume=3;
 global.s_volume=5;
 
 globalvar base_w, base_h, aspect, view_w, view_h;
@@ -26,5 +26,6 @@ depth=-98;
 light_surf = surface_create(room_width, room_height);
 
 global.music=audio_play_sound(s_music, 1, true);
+audio_sound_gain(global.music, global.m_volume/10, 0);
 
 global.enemy_count=0;

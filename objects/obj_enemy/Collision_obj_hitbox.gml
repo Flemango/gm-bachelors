@@ -1,6 +1,6 @@
 if (!hit)
 {
-	state=states.damage;
+	state_set(states.damage);//state=states.damage;
 	
 	image_index=0;
 	dir=sign(obj_char.x-x);

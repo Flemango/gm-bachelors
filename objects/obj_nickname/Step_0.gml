@@ -4,6 +4,12 @@ name=keyboard_string;
 
 enter=(keyboard_check(vk_enter));
 
+if (keyboard_check_pressed(vk_anykey)) 
+{
+	var effect=audio_play_sound(s_effect, 1, false);
+	audio_sound_gain(effect, global.s_volume/10, 0);
+}
+
 if (keyboard_check(vk_enter)) pressed=true;
 else pressed=false;
 

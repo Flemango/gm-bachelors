@@ -1,13 +1,14 @@
 spd=0;
 dir=0;
 hit=false;
+dead=false;
 game_spd=game_get_speed(gamespeed_fps);
 
 run_spd=fps_dependant(1);
 knockback_spd=fps_dependant(10);
 frc=frc_calc(.066, run_spd);
 
-see_range=128;
+//see_range=128;
 
 aggro_range=room_width/2;
 aggro_check=false;
@@ -51,3 +52,12 @@ image_index=irandom_range(0, image_number-1);
 child_len = array_length(child_arr);
 global.enemy_count++;
 show_debug_message("no of enemies: "+string(global.enemy_count));
+
+is_playing=false;
+
+shoot_snd=audio_play_sound(s_bowshot, 2, false);
+audio_stop_sound(shoot_snd);
+
+atk_snd=audio_play_sound(s_swing1, 2, false);
+audio_stop_sound(atk_snd);
+snd_played=false;

@@ -6,7 +6,7 @@ if (global.pause) {
 image_speed=1;
 
 var target=obj_char;
-var char_w=target.bbox_right-target.bbox_left;
+//var char_w=target.bbox_right-target.bbox_left;
 
 var self_w=bbox_right-bbox_left;
 
@@ -70,6 +70,7 @@ switch (state)
 	case states.prepare:
 		spd=0;
 		mask_index=sprite_index;
+		snd_played=false;
 		
 		if (alarm[0]==-1)
 		{
@@ -79,6 +80,9 @@ switch (state)
 				{
 					alarm[0]=game_spd*attack_cd;
 					show_debug_message(alarm[0]);
+					
+					shoot_snd=audio_play_sound(s_bowshot, 2, false);
+					audio_sound_gain(shoot_snd, global.s_volume/10, 0);
 				}
 				else
 					state_set(states.chase);
@@ -102,19 +106,39 @@ switch (state)
 		{
 			if (!shot)
 			{
-				obj=instance_create_depth(x,y-14,depth+1, obj_arrow);
+				instance_create_depth(x,y-14,depth+1, obj_arrow);
 				shot=true;
+			}
+		} 
+		else 
+		{
+			if (object_index==obj_skeleton || object_index==obj_dark_skeleton || object_index==obj_baby_skeleton)
+			{
+				if (alarm[3]==-1 && !snd_played) 
+				{
+					alarm[3]=game_spd*.3;
+				}
+				//played=true;
 			}
 		}
 	break;
 	
 	case states.damage:
 	//var reset=false;
+		if (alarm[0]!=-1) image_index=0;
 		alarm[0]=-1;
-		/*if (!reset) {
-			sprite_index=0;
-			reset=true;
-		}*/
+		
+		if (archer) audio_stop_sound(shoot_snd);
+		else {
+			audio_stop_sound(atk_snd);
+			snd_played=false;
+		}
+		if (object_index!=obj_bat && !is_playing)
+		{
+			var dmg_snd=audio_play_sound(s_bones, 2, false);
+			audio_sound_gain(dmg_snd, global.s_volume/10, 0);
+			is_playing=true;
+		}
 		
 		for (i=0; i<child_len; i++)
 		{
@@ -126,20 +150,21 @@ switch (state)
 					spd=0;
 			}
 		}
-		show_debug_message("aaaaagfdgfdgfd");
+		//show_debug_message("aaaaagfdgfdgfd");
 		
 		if (spd==0) 
+		{
 			state_set(states.idle);
+			is_playing=false;
+		}
+			
 	break;
 	
 	case states.die:
 		hit=true;
-		depth=99;
+		depth=98;
 		
-		if (image_index>=(image_number-1))
-			image_speed=0;
-			
-		if (alarm[1]=-1) alarm[1]=game_spd*2;
+		if (alarm[1]==-1) alarm[1]=1;
 	break;
 }
 
@@ -158,8 +183,9 @@ if (spd!=0 && (state==states.damage || state==states.die))
 
 if (hp<=0)
 {
-	hit=true;
-	hp=0;
+	//hit=true;
+	//hp=0;
+
 	state_set(states.die);
 }
 

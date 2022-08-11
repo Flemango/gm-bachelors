@@ -30,7 +30,7 @@ function state_attack(_state, _mask, _obj) : state_set(_state) constructor
 		}
 		else
 		{
-			_hitbox = instance_create_depth(x,y, obj_char.depth-1, obj_hitbox);
+			_hitbox = instance_create_depth(x,y, obj_char.depth-1, _obj);
 			_hitbox.sprite_index=_mask;
 		}
 		
