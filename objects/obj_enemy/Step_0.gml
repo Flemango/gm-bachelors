@@ -118,7 +118,6 @@ switch (state)
 				{
 					alarm[3]=game_spd*.3;
 				}
-				//played=true;
 			}
 		}
 	break;
@@ -133,10 +132,18 @@ switch (state)
 			audio_stop_sound(atk_snd);
 			snd_played=false;
 		}
-		if (object_index!=obj_bat && !is_playing)
+		
+		if (!is_playing)
 		{
-			var dmg_snd=audio_play_sound(s_bones, 2, false);
-			audio_sound_gain(dmg_snd, global.s_volume/10, 0);
+			if (object_index!=obj_bat)
+			{
+				var dmg_snd=audio_play_sound(s_bones, 2, false);
+				audio_sound_gain(dmg_snd, global.s_volume/10, 0);
+			}
+			else {
+				var dmg_snd=audio_play_sound(s_bat_dmg, 2, false);
+				audio_sound_gain(dmg_snd, global.s_volume/10, 0);
+			}
 			is_playing=true;
 		}
 		

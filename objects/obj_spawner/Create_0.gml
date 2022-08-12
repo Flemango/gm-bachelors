@@ -23,7 +23,7 @@ repeat(global.wave)
 		
 		case 1:
 		case 3:
-			if (global.wave<10)
+			if (global.wave<8)
 			{
 				if (global.wave>3) instance_create_layer(room_width/2-(spawn_radius+spread*j), 204, "Instances", obj_skeleton);
 				instance_create_layer(room_width/2+(spawn_radius+spread*j), 204, "Instances", obj_skeleton);

@@ -1,3 +1,10 @@
+if (global.pause) {
+	image_speed=0;
+	exit;
+}
+
+image_speed=1;
+
 if (global.enemy_count<=0)
 {
 	image_index=1;

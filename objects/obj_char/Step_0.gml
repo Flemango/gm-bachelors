@@ -68,7 +68,7 @@ if (state==states.idle || state==states.run)
 		switch(combo)
 		{
 		case 0:
-			state_attack(states.basic1, mask_attack1, obj_hitbox);
+			hitbox_id=state_attack(states.basic1, mask_attack1, obj_hitbox);
 			
 			var atk_snd=audio_play_sound(s_swing1, 2, false);
 			audio_sound_gain(atk_snd, global.s_volume/10, 0);
@@ -77,7 +77,7 @@ if (state==states.idle || state==states.run)
 			alarm[0]=gamespd*1.2;
 			break;
 		case 1:
-			state_attack(states.basic2, mask_attack2, obj_hitbox);
+			hitbox_id=state_attack(states.basic2, mask_attack2, obj_hitbox);
 			
 			var atk_snd=audio_play_sound(s_swing2, 2, false);
 			audio_sound_gain(atk_snd, global.s_volume/10, 0);
@@ -86,7 +86,7 @@ if (state==states.idle || state==states.run)
 			alarm[0]=gamespd*1.2;
 			break;
 		case 2:
-			state_attack(states.basic3, mask_attack3, obj_hitbox);
+			hitbox_id=state_attack(states.basic3, mask_attack3, obj_hitbox);
 			
 			var atk_snd=audio_play_sound(s_swing_hit, 2, false);
 			audio_sound_gain(atk_snd, global.s_volume/10, 0);
@@ -98,7 +98,7 @@ if (state==states.idle || state==states.run)
 	
 	if (explosion && charge_score==max_hp)
 	{
-		state_attack(states.explosion, mask_explosion, obj_hitbox);
+		hitbox_id=state_attack(states.explosion, mask_explosion, obj_hitbox);
 		
 		var explode_snd=audio_play_sound(s_explosion, 2, false);
 		audio_sound_gain(explode_snd, global.s_volume/10, 0);
@@ -125,7 +125,7 @@ if (state==states.charge)
 			var atk_snd=audio_play_sound(s_swing2, 2, false);
 			audio_sound_gain(atk_snd, global.s_volume/10, 0);
 			
-			state_attack(states.release, mask_release, obj_hitbox);
+			hitbox_id=state_attack(states.release, mask_release, obj_hitbox);
 		} 
 		else 
 			state_set(states.idle);
@@ -157,7 +157,7 @@ if (state==states.damage)
 		audio_sound_gain(dmg_snd, global.s_volume/10, 0);
 	}
 	hit=true;
-	//instance_destroy(obj_hitbox);
+	instance_destroy(hitbox_id);
 	show_debug_message("hp: "+string(hp));
 }
 

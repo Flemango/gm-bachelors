@@ -31,10 +31,13 @@ function state_attack(_state, _mask, _obj) : state_set(_state) constructor
 		else
 		{
 			_hitbox = instance_create_depth(x,y, obj_char.depth-1, _obj);
+			show_debug_message("created hitbox");
 			_hitbox.sprite_index=_mask;
 		}
 		
 		_hitbox.image_xscale=image_xscale;
 		_hitbox.image_yscale=image_yscale;
+		
+		return _hitbox;
 	}
 }

@@ -1,7 +1,7 @@
 spd=0;
 dir=0;
 hit=false;
-dead=false;
+bat=false;
 game_spd=game_get_speed(gamespeed_fps);
 
 run_spd=fps_dependant(1);

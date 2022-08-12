@@ -25,6 +25,7 @@ if (room==room_game)
 			global.pause=false;
 			global.enemy_count=0;
 			global.wave=1;
+			score=0;
 
 			room_goto(room_menu);
 		}

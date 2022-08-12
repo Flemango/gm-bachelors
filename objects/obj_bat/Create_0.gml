@@ -25,3 +25,5 @@ attack_cd=1;
 
 atk_dmg=20;
 hp=50;
+
+bat=true;

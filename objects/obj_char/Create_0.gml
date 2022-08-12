@@ -71,7 +71,9 @@ keyboard_set_map(ord("S"), vk_down);
 
 #endregion
 
-show_debug_message("frc: "+string(frc));
-show_debug_message("max_x: "+string(max_x));
+//show_debug_message("frc: "+string(frc));
+//show_debug_message("max_x: "+string(max_x));
+
+hitbox_id=-4;
 
 //view_camera[0] = camera_create_view(0,0,1366,1024);

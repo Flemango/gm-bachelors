@@ -15,6 +15,9 @@ else pressed=false;
 
 if (keyboard_check_released(vk_enter))
 {
+	global.music=audio_play_sound(s_music, 1, true);
+	audio_sound_gain(global.music, global.m_volume/10, 0);
+	
 	instance_create_depth(x, y, depth, obj_hiscore);
 	instance_destroy(self);
 }
