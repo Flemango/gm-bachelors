@@ -3,7 +3,7 @@ bat - 174
 skeleton - 204
 baby skeleton - 208
 */
-//global.wave=6;
+//global.wave=7;
 var spawn_radius, spread, i, j;
 
 i=0;

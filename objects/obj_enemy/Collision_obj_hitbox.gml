@@ -5,7 +5,7 @@ if (!hit)
 	image_index=0;
 	dir=sign(obj_char.x-x);
 	dir=-dir;
-	spd=dir*knockback_spd*irandom_range(0.5, 1.5);
+	spd=dir*knockback_spd*irandom_range(0.4, 1.6);
 	
 	show_debug_message("HP: "+string(hp));
 	show_debug_message("Score: "+string(score));

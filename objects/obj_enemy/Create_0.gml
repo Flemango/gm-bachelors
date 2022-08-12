@@ -10,6 +10,7 @@ frc=frc_calc(.066, run_spd);
 
 //see_range=128;
 
+
 aggro_range=room_width/2;
 aggro_check=false;
 aggro_check_dur=fps_dependant(5);
@@ -52,6 +53,8 @@ image_index=irandom_range(0, image_number-1);
 child_len = array_length(child_arr);
 global.enemy_count++;
 show_debug_message("no of enemies: "+string(global.enemy_count));
+
+global.nearest=array_create(child_len, room_width);
 
 is_playing=false;
 

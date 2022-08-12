@@ -35,17 +35,21 @@ switch (state)
 	case states.chase:
 		dir=sign(target.x-x);
 		
-		var index_holder=object_index;
-		if (object_index==obj_dark_skeleton) index_holder=obj_skeleton; //quick fix for dark skeleton not to pass thru regular skeletons (delete if theyre not gonna be both in the game at the same time)
+		//var index_holder=object_index;
+		//if (object_index==obj_dark_skeleton) index_holder=obj_skeleton; //quick fix for dark skeleton not to pass thru regular skeletons (delete if theyre not gonna be both in the game at the same time)
+		
 		for (i=0; i<child_len; i++)
 		{
-			if (index_holder==child_arr[i])
+			if (object_index==child_arr[i])
 			{
-				if (!place_meeting(x+self_w/4*dir, y, child_arr[i]))
-					spd=dir*run_spd;
-				else 
+				var other_child=instance_place(x+self_w/4*dir, y, child_arr[i]);
+				if (!other_child)
 				{
-					if collision_line(x+(self_w/2*dir), y, target.x, target.y, child_arr[i], false, true)
+					spd=dir*run_spd;
+				}
+				else 
+				{ 
+					if (collision_line(x+self_w/2*dir, y, target.x, target.y, other_child, false, true))
 						spd=0;
 					else spd=dir*run_spd;
 				}
@@ -62,7 +66,7 @@ switch (state)
 		}
 		else
 		{
-			if (place_meeting(x, y, target))
+			if (place_meeting(x+dir, y, target))
 				state_set(states.prepare);
 		}
 	break;
@@ -97,7 +101,6 @@ switch (state)
 				else
 					state_set(states.chase);
 			}
-			
 		}
 	break;
 	
@@ -151,14 +154,13 @@ switch (state)
 		{
 			if (object_index==child_arr[i])
 			{
-				sprite_index=object_index.state.sprite; //fixing not displaying dmg animation probably cus of looping
+				//sprite_index=object_index.state.sprite; //fixing not displaying dmg animation probably cus of looping
 				var other_obj=instance_place(x+self_w/4*dir, y, child_arr[i]); //fixing stacking up against the level border
 				if (other_obj && (other_obj.id.x==mask_w/2 || other_obj.id.x==room_width-mask_w/2))
 					spd=0;
 			}
 		}
-		//show_debug_message("aaaaagfdgfdgfd");
-		
+
 		if (spd==0) 
 		{
 			state_set(states.idle);
