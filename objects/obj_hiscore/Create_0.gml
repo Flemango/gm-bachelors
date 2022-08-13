@@ -32,3 +32,6 @@ if (score>val)
 	ds_grid_sort(hiscore_list, 1, false);
 }
 
+back_layer = layer_get_id("Background");
+layer_hspeed(back_layer, fps_dependant(-0.5));
+

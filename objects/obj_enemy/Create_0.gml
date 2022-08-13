@@ -54,7 +54,7 @@ child_len = array_length(child_arr);
 global.enemy_count++;
 show_debug_message("no of enemies: "+string(global.enemy_count));
 
-global.nearest=array_create(child_len, room_width);
+//global.nearest=array_create(child_len, room_width);
 
 is_playing=false;
 
