@@ -8,7 +8,7 @@ function State(_sprite) constructor
 	}
 }
 
-function state_set(_state) constructor
+function state_set(_state)
 {
 	if (state==_state) return;
 	state=_state;
@@ -20,24 +20,23 @@ function state_set(_state) constructor
 
 function state_attack(_state, _mask, _obj) : state_set(_state) constructor
 {	
-	if (!instance_exists(obj_hitbox))
+	var _hitbox;
+	if (_obj==self)
 	{
-		var _hitbox;
-		if (_obj==self)
-		{
-			_hitbox = _obj;
-			_hitbox.mask_index=_mask;
-		}
-		else
-		{
-			_hitbox = instance_create_depth(x,y, obj_char.depth-1, _obj);
-			show_debug_message("created hitbox");
-			_hitbox.sprite_index=_mask;
-		}
-		
-		_hitbox.image_xscale=image_xscale;
-		_hitbox.image_yscale=image_yscale;
-		
-		return _hitbox;
+		_hitbox = _obj;
+		_hitbox.mask_index=_mask;
 	}
+	else
+	{
+		_hitbox = instance_create_depth(x,y, self.depth-1, _obj);
+		show_debug_message("created hitbox");
+		_hitbox.sprite_index=_mask;
+	}
+		
+	_hitbox.image_xscale=image_xscale;
+	_hitbox.image_yscale=image_yscale;
+		
+	return _hitbox;
 }
+
+
