@@ -44,7 +44,6 @@
     {"id":{"name":"spr_enemy_prep","path":"sprites/spr_enemy_prep/spr_enemy_prep.yy",},"order":2,},
     {"id":{"name":"spr_mb","path":"sprites/spr_mb/spr_mb.yy",},"order":6,},
     {"id":{"name":"spr_run","path":"sprites/spr_run/spr_run.yy",},"order":1,},
-    {"id":{"name":"sdr_alphafix","path":"shaders/sdr_alphafix/sdr_alphafix.yy",},"order":0,},
     {"id":{"name":"spr_dark_dmg","path":"sprites/spr_dark_dmg/spr_dark_dmg.yy",},"order":3,},
     {"id":{"name":"spr_bat_dmg","path":"sprites/spr_bat_dmg/spr_bat_dmg.yy",},"order":2,},
     {"id":{"name":"spr_archer_run","path":"sprites/spr_archer_run/spr_archer_run.yy",},"order":1,},
@@ -146,7 +145,6 @@
   "Folders": [
     {"folderPath":"folders/sounds.yy","order":2,"resourceVersion":"1.0","name":"sounds","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/sequences.yy","order":3,"resourceVersion":"1.0","name":"sequences","tags":[],"resourceType":"GMFolder",},
-    {"folderPath":"folders/shaders.yy","order":6,"resourceVersion":"1.0","name":"shaders","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/rooms.yy","order":8,"resourceVersion":"1.0","name":"rooms","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/fonts.yy","order":4,"resourceVersion":"1.0","name":"fonts","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/sprites.yy","order":0,"resourceVersion":"1.0","name":"sprites","tags":[],"resourceType":"GMFolder",},

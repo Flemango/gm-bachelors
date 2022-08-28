@@ -3,7 +3,6 @@ bat - 174
 skeleton - 204
 baby skeleton - 208
 */
-global.wave=2;
 var spawn_radius, spread, i, j;
 
 i=0;
@@ -45,9 +44,6 @@ repeat(global.wave)
 			instance_create_layer(room_width/2+(spawn_radius+spread*j), 208, "Instances", obj_baby_skeleton);
 		break;
 	}
-	show_debug_message("spread: "+string(spread));
-	show_debug_message("spread*j: "+string(spread*j));
-	show_debug_message("J: "+string(j));
 	
 	i++;
 	if (i>4) i=0;

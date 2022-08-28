@@ -35,9 +35,6 @@ switch (state)
 	case states.chase:
 		dir=sign(target.x-x);
 		
-		//var index_holder=object_index;
-		//if (object_index==obj_dark_skeleton) index_holder=obj_skeleton; //quick fix for dark skeleton not to pass thru regular skeletons (delete if theyre not gonna be both in the game at the same time)
-		
 		for (i=0; i<child_len; i++)
 		{
 			if (object_index==child_arr[i])
@@ -126,7 +123,7 @@ switch (state)
 	break;
 	
 	case states.damage:
-	//var reset=false;
+
 		if (alarm[0]!=-1) image_index=0;
 		alarm[0]=-1;
 		
@@ -166,7 +163,6 @@ switch (state)
 			state_set(states.idle);
 			is_playing=false;
 		}
-			
 	break;
 	
 	case states.die:
